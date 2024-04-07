@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7C5C1602-1A6E-4FC0-AEA0-A2D9BCF28D75}</ProjectGuid>
+    <ProjectGuid>{7250E406-0AC6-4226-A5BA-4ABAE5654A34}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>NoteAppUI</RootNamespace>
-    <AssemblyName>NoteAppUI</AssemblyName>
+    <RootNamespace>ContactAppUI</RootNamespace>
+    <AssemblyName>ContactAppUI</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -77,8 +77,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\NoteAppUI\NoteApp\ContactApp.csproj">
-      <Project>{657db6aa-551b-448a-aba9-f03fcb92cb20}</Project>
+    <ProjectReference Include="..\ContactApp\ContactApp.csproj">
+      <Project>{6b554edb-877f-42ac-bfbd-077a9c3eee37}</Project>
       <Name>ContactApp</Name>
     </ProjectReference>
   </ItemGroup>

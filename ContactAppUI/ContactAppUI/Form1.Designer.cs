@@ -1,4 +1,4 @@
-﻿namespace NoteAppUI
+﻿namespace ContactAppUI
 {
 	partial class Form1
 	{
