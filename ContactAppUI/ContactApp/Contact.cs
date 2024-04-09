@@ -42,9 +42,11 @@ namespace ContactApp
         /// Конструктор без параметров.
         /// </summary>
 		public Contact()
-        {
+		{
 			Phone = new PhoneNumber();
-        }
+		}
+
+		public string PhoneNumber { get; set; }
 
 		/// <summary>
 		/// Конструктор с параметрами.
@@ -55,7 +57,7 @@ namespace ContactApp
 		/// <param name="vkId"> vkID. </param>
 		/// <param name="birthday"> День рождения. </param>
 		/// <param name="phone"> Номер телефона. </param>
-        public Contact(
+		public Contact(
 	        string surname, 
 	        string name, 
 	        string email, 
