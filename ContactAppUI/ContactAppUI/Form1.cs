@@ -34,7 +34,7 @@ namespace ContactAppUI
 		}
 		private void btnSerialize_Click(object sender, EventArgs e)
 		{
-			string vkId = txtVkId.Text; // Получение данных из TextBox
+			string vkId = FindContactTextBox.Text; // Получение данных из TextBox
 
 			if (!string.IsNullOrEmpty(vkId))
 			{
@@ -68,6 +68,21 @@ namespace ContactAppUI
 			{
 				MessageBox.Show("Нет данных для десериализации");
 			}
+		}
+
+		private void label5_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void textBox2_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void AddContactPicture_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
