@@ -1,38 +1,42 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 
 namespace ContactApp.Service
 {
 	/// <summary>
-	/// Класс сериализатор.
+	/// Класс сериализатор контактов.
 	/// </summary>
 	public static class Serializer
 	{
+		/// <summary>
+		/// Путь к JSON - файлу контактов.
+		/// </summary>
+		private static readonly string _path =
+			Path.Combine(AppContext.BaseDirectory, "Contacts.json");
 
 		/// <summary>
-		/// Метод сохранения данных в файл.
+		/// Метод сериализации данных объектов класса <see cref="Contact"/>.
 		/// </summary>
-		/// <param name="data"> Список контактов. </param>
-		/// <param name="filename"> Путь до файла.</param>
-		public static void SaveToFile(List<Contact> data, string filename)
+		/// <param name="data">Список объектов класса <see cref="Contact"/>.</param>
+		public static void SaveToFile(List<Contact> data)
 		{
 			var serialized = JsonConvert.SerializeObject(data, Formatting.Indented);
-			File.WriteAllText(filename, serialized);
+			File.WriteAllText(_path, serialized);
 		}
 
 		/// <summary>
-		/// Метод десериализации.
+		/// Метод десериализации данных объектов класса <see cref="Contact"/>.
 		/// </summary>
-		/// <param name="filename"> Путь до файла. </param>
-		/// <returns> Возвращает список контактов. </returns>
-		public static List<Contact> LoadFromFile(string filename)
+		/// <returns>Список объектов класса <see cref="Contact"/>.</returns>
+		public static List<Contact> LoadFromFile()
 		{
 			var data = new List<Contact>();
-			if (File.Exists(filename))
+			if (File.Exists(_path))
 			{
-				var jsonData = File.ReadAllText(filename);
-				data = JsonConvert.DeserializeObject<List<Contact>>(jsonData);
+				var jsonConvert = File.ReadAllText(_path);
+				data = JsonConvert.DeserializeObject<List<Contact>>(jsonConvert);
 			}
 			return data;
 		}
