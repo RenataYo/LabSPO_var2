@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace ContactAppUI
 {
-	public partial class Form1 : Form
+	public partial class ContactApp : Form
 	{
-		public Form1()
+		public ContactApp()
 		{
 			InitializeComponent();
 		}
@@ -81,6 +81,11 @@ namespace ContactAppUI
 		}
 
 		private void AddContactPicture_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
 		{
 
 		}

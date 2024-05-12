@@ -16,5 +16,10 @@ namespace ContactAppUI
 		{
 			InitializeComponent();
 		}
+
+		private void AboutForms_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
