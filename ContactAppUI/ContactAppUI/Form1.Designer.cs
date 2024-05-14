@@ -47,25 +47,25 @@
 			this.EmailLabel = new System.Windows.Forms.Label();
 			this.VkLabel = new System.Windows.Forms.Label();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-			this.SurnameTextBox = new System.Windows.Forms.TextBox();
-			this.NameTextBox = new System.Windows.Forms.TextBox();
-			this.PhoneTextBox = new System.Windows.Forms.TextBox();
-			this.EmailTextBox = new System.Windows.Forms.TextBox();
-			this.VkTextBoxox5 = new System.Windows.Forms.TextBox();
-			this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-			this.BirthdayDateTime = new System.Windows.Forms.DateTimePicker();
 			this.ContactsListBox = new System.Windows.Forms.ListBox();
-			this.AddContactPicture = new System.Windows.Forms.PictureBox();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.BirthdayDateTime = new System.Windows.Forms.DateTimePicker();
+			this.VkTextBoxox5 = new System.Windows.Forms.TextBox();
+			this.EmailTextBox = new System.Windows.Forms.TextBox();
+			this.PhoneTextBox = new System.Windows.Forms.TextBox();
+			this.NameTextBox = new System.Windows.Forms.TextBox();
+			this.SurnameTextBox = new System.Windows.Forms.TextBox();
+			this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+			this.pictureBox3 = new System.Windows.Forms.PictureBox();
 			this.menuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
 			this.splitContainer1.Panel2.SuspendLayout();
 			this.splitContainer1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.AddContactPicture)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// FindContactTextBox
@@ -85,7 +85,7 @@
             this.helpToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(1149, 36);
+			this.menuStrip1.Size = new System.Drawing.Size(1149, 33);
 			this.menuStrip1.TabIndex = 3;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -219,7 +219,7 @@
 			// 
 			// splitContainer1.Panel1
 			// 
-			this.splitContainer1.Panel1.Controls.Add(this.AddContactPicture);
+			this.splitContainer1.Panel1.Controls.Add(this.pictureBox3);
 			this.splitContainer1.Panel1.Controls.Add(this.ContactsListBox);
 			this.splitContainer1.Panel1.Controls.Add(this.pictureBox2);
 			this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
@@ -245,50 +245,6 @@
 			this.splitContainer1.SplitterDistance = 340;
 			this.splitContainer1.TabIndex = 11;
 			// 
-			// SurnameTextBox
-			// 
-			this.SurnameTextBox.Location = new System.Drawing.Point(156, 9);
-			this.SurnameTextBox.Name = "SurnameTextBox";
-			this.SurnameTextBox.Size = new System.Drawing.Size(622, 26);
-			this.SurnameTextBox.TabIndex = 11;
-			// 
-			// NameTextBox
-			// 
-			this.NameTextBox.Location = new System.Drawing.Point(156, 50);
-			this.NameTextBox.Name = "NameTextBox";
-			this.NameTextBox.Size = new System.Drawing.Size(622, 26);
-			this.NameTextBox.TabIndex = 12;
-			this.NameTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-			// 
-			// PhoneTextBox
-			// 
-			this.PhoneTextBox.Location = new System.Drawing.Point(156, 148);
-			this.PhoneTextBox.Name = "PhoneTextBox";
-			this.PhoneTextBox.Size = new System.Drawing.Size(622, 26);
-			this.PhoneTextBox.TabIndex = 13;
-			// 
-			// EmailTextBox
-			// 
-			this.EmailTextBox.Location = new System.Drawing.Point(156, 194);
-			this.EmailTextBox.Name = "EmailTextBox";
-			this.EmailTextBox.Size = new System.Drawing.Size(622, 26);
-			this.EmailTextBox.TabIndex = 14;
-			// 
-			// VkTextBoxox5
-			// 
-			this.VkTextBoxox5.Location = new System.Drawing.Point(156, 249);
-			this.VkTextBoxox5.Name = "VkTextBoxox5";
-			this.VkTextBoxox5.Size = new System.Drawing.Size(622, 26);
-			this.VkTextBoxox5.TabIndex = 15;
-			// 
-			// BirthdayDateTime
-			// 
-			this.BirthdayDateTime.Location = new System.Drawing.Point(156, 99);
-			this.BirthdayDateTime.Name = "BirthdayDateTime";
-			this.BirthdayDateTime.Size = new System.Drawing.Size(617, 26);
-			this.BirthdayDateTime.TabIndex = 16;
-			this.BirthdayDateTime.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-			// 
 			// ContactsListBox
 			// 
 			this.ContactsListBox.FormattingEnabled = true;
@@ -297,30 +253,6 @@
 			this.ContactsListBox.Name = "ContactsListBox";
 			this.ContactsListBox.Size = new System.Drawing.Size(327, 604);
 			this.ContactsListBox.TabIndex = 5;
-			// 
-			// AddContactPicture
-			// 
-			this.AddContactPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.AddContactPicture.Image = ((System.Drawing.Image)(resources.GetObject("AddContactPicture.Image")));
-			this.AddContactPicture.ImageLocation = "TOP";
-			this.AddContactPicture.InitialImage = null;
-			this.AddContactPicture.Location = new System.Drawing.Point(0, 666);
-			this.AddContactPicture.Name = "AddContactPicture";
-			this.AddContactPicture.Size = new System.Drawing.Size(57, 69);
-			this.AddContactPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.AddContactPicture.TabIndex = 6;
-			this.AddContactPicture.TabStop = false;
-			this.AddContactPicture.Click += new System.EventHandler(this.AddContactPicture_Click);
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(73, 666);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(57, 69);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox1.TabIndex = 7;
-			this.pictureBox1.TabStop = false;
 			// 
 			// pictureBox2
 			// 
@@ -331,6 +263,72 @@
 			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox2.TabIndex = 8;
 			this.pictureBox2.TabStop = false;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.Location = new System.Drawing.Point(76, 666);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(57, 69);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox1.TabIndex = 7;
+			this.pictureBox1.TabStop = false;
+			// 
+			// BirthdayDateTime
+			// 
+			this.BirthdayDateTime.Location = new System.Drawing.Point(156, 99);
+			this.BirthdayDateTime.Name = "BirthdayDateTime";
+			this.BirthdayDateTime.Size = new System.Drawing.Size(617, 26);
+			this.BirthdayDateTime.TabIndex = 16;
+			this.BirthdayDateTime.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+			// 
+			// VkTextBoxox5
+			// 
+			this.VkTextBoxox5.Location = new System.Drawing.Point(156, 249);
+			this.VkTextBoxox5.Name = "VkTextBoxox5";
+			this.VkTextBoxox5.Size = new System.Drawing.Size(622, 26);
+			this.VkTextBoxox5.TabIndex = 15;
+			// 
+			// EmailTextBox
+			// 
+			this.EmailTextBox.Location = new System.Drawing.Point(156, 194);
+			this.EmailTextBox.Name = "EmailTextBox";
+			this.EmailTextBox.Size = new System.Drawing.Size(622, 26);
+			this.EmailTextBox.TabIndex = 14;
+			// 
+			// PhoneTextBox
+			// 
+			this.PhoneTextBox.Location = new System.Drawing.Point(156, 148);
+			this.PhoneTextBox.Name = "PhoneTextBox";
+			this.PhoneTextBox.Size = new System.Drawing.Size(622, 26);
+			this.PhoneTextBox.TabIndex = 13;
+			// 
+			// NameTextBox
+			// 
+			this.NameTextBox.Location = new System.Drawing.Point(156, 50);
+			this.NameTextBox.Name = "NameTextBox";
+			this.NameTextBox.Size = new System.Drawing.Size(622, 26);
+			this.NameTextBox.TabIndex = 12;
+			this.NameTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+			// 
+			// SurnameTextBox
+			// 
+			this.SurnameTextBox.Location = new System.Drawing.Point(156, 9);
+			this.SurnameTextBox.Name = "SurnameTextBox";
+			this.SurnameTextBox.Size = new System.Drawing.Size(622, 26);
+			this.SurnameTextBox.TabIndex = 11;
+			// 
+			// pictureBox3
+			// 
+			this.pictureBox3.ErrorImage = null;
+			this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+			this.pictureBox3.InitialImage = null;
+			this.pictureBox3.Location = new System.Drawing.Point(3, 666);
+			this.pictureBox3.Name = "pictureBox3";
+			this.pictureBox3.Size = new System.Drawing.Size(57, 69);
+			this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox3.TabIndex = 9;
+			this.pictureBox3.TabStop = false;
 			// 
 			// ContactApp
 			// 
@@ -352,9 +350,9 @@
 			this.splitContainer1.Panel2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
 			this.splitContainer1.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.AddContactPicture)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -388,9 +386,9 @@
 		private System.ComponentModel.BackgroundWorker backgroundWorker1;
 		private System.Windows.Forms.DateTimePicker BirthdayDateTime;
 		private System.Windows.Forms.ListBox ContactsListBox;
-		private System.Windows.Forms.PictureBox AddContactPicture;
 		private System.Windows.Forms.PictureBox pictureBox2;
 		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.PictureBox pictureBox3;
 	}
 }
 
