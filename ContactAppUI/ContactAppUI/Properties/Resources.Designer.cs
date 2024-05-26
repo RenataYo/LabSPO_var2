@@ -63,9 +63,59 @@ namespace ContactAppUI.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Add_User_80_icon_icons_com_57380 {
+        internal static System.Drawing.Bitmap AddContactIcon_512x512 {
             get {
-                object obj = ResourceManager.GetObject("Add_User-80_icon-icons.com_57380", resourceCulture);
+                object obj = ResourceManager.GetObject("AddContactIcon 512x512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AddContactIconContrast_512x512 {
+            get {
+                object obj = ResourceManager.GetObject("AddContactIconContrast 512x512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DeleteContactIcon_512x512 {
+            get {
+                object obj = ResourceManager.GetObject("DeleteContactIcon 512x512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DeleteContactIconContrast_512x512 {
+            get {
+                object obj = ResourceManager.GetObject("DeleteContactIconContrast 512x512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EditContactIcon_512x512 {
+            get {
+                object obj = ResourceManager.GetObject("EditContactIcon 512x512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EditContactIconContrast_512x512 {
+            get {
+                object obj = ResourceManager.GetObject("EditContactIconContrast 512x512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

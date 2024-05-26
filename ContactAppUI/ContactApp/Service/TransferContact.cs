@@ -9,7 +9,7 @@ namespace ContactApp.Service
 	/// <summary>
 	/// Класс для передачи объекта контакта между формами.
 	/// </summary>
-	internal class TransferContact
+	public class TransferContact
 	{
 		/// <summary>
 		/// Задает и возвращает контакт между формами.

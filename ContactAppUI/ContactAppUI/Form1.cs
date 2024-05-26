@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ContactAppUI.Properties;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Resources;
 
 namespace ContactAppUI
 {
@@ -228,7 +229,7 @@ namespace ContactAppUI
 			SurnameTextBox.Text = contact.Surname;
 			NameTextBox.Text = contact.Name;
 			BirthdayDateTime.Value = contact.Birthday;
-			PhoneTextBox.Text = contact.PhoneNumber.Phone;
+			PhoneTextBox.Text = contact.PhoneNumber;
 			EmailTextBox.Text = contact.Email;
 			VkTextBox.Text = contact.VkID;
 		}
@@ -331,6 +332,16 @@ namespace ContactAppUI
 		}
 
 		private void MainForm_Load(object sender, EventArgs e)
+		{
+
+		}
+
+		private void FindContactTextBox_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
 		{
 
 		}

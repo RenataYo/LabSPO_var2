@@ -151,6 +151,7 @@
 			this.button1.TabIndex = 29;
 			this.button1.Text = "ОК";
 			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// CancelButton
 			// 
@@ -183,6 +184,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "AddEditContactForm";
 			this.Text = "Add/EditContact";
+			this.Load += new System.EventHandler(this.AddEditContactForm_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
