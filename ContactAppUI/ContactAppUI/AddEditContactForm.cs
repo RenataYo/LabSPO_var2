@@ -131,7 +131,7 @@ namespace ContactAppUI
 		{
 			try
 			{
-				CurrentContact.PhoneNumber.Phone = PhoneTextBox.Text;
+				CurrentContact.Phone.Number = PhoneTextBox.Text;
 				PhoneTextBox.BackColor = Color.White;
 				TryUnlockCreateButton();
 			}
@@ -187,7 +187,7 @@ namespace ContactAppUI
 			SurnameTextBox.Text = contact.Surname;
 			NameTextBox.Text = contact.Name;
 			BirthdayDateTime.Value = contact.Birthday;
-			PhoneTextBox.Text = contact.PhoneNumber.Phone;
+			PhoneTextBox.Text = contact.Phone.Number;
 			EmailTextBox.Text = contact.Email;
 			VkTextBox.Text = contact.VkID;
 		}

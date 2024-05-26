@@ -30,7 +30,7 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEditContactForm));
 			this.BirthdayDateTime = new System.Windows.Forms.DateTimePicker();
-			this.VkTextBoxox5 = new System.Windows.Forms.TextBox();
+			this.VkTextBox = new System.Windows.Forms.TextBox();
 			this.EmailTextBox = new System.Windows.Forms.TextBox();
 			this.PhoneTextBox = new System.Windows.Forms.TextBox();
 			this.NameTextBox = new System.Windows.Forms.TextBox();
@@ -53,12 +53,12 @@
 			this.BirthdayDateTime.TabIndex = 28;
 			this.BirthdayDateTime.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
 			// 
-			// VkTextBoxox5
+			// VkTextBox
 			// 
-			this.VkTextBoxox5.Location = new System.Drawing.Point(162, 302);
-			this.VkTextBoxox5.Name = "VkTextBoxox5";
-			this.VkTextBoxox5.Size = new System.Drawing.Size(622, 26);
-			this.VkTextBoxox5.TabIndex = 27;
+			this.VkTextBox.Location = new System.Drawing.Point(162, 302);
+			this.VkTextBox.Name = "VkTextBox";
+			this.VkTextBox.Size = new System.Drawing.Size(622, 26);
+			this.VkTextBox.TabIndex = 27;
 			// 
 			// EmailTextBox
 			// 
@@ -170,7 +170,7 @@
 			this.Controls.Add(this.CancelButton);
 			this.Controls.Add(this.OkButton);
 			this.Controls.Add(this.BirthdayDateTime);
-			this.Controls.Add(this.VkTextBoxox5);
+			this.Controls.Add(this.VkTextBox);
 			this.Controls.Add(this.EmailTextBox);
 			this.Controls.Add(this.PhoneTextBox);
 			this.Controls.Add(this.NameTextBox);
@@ -193,7 +193,7 @@
 		#endregion
 
 		private System.Windows.Forms.DateTimePicker BirthdayDateTime;
-		private System.Windows.Forms.TextBox VkTextBoxox5;
+		private System.Windows.Forms.TextBox VkTextBox;
 		private System.Windows.Forms.TextBox EmailTextBox;
 		private System.Windows.Forms.TextBox PhoneTextBox;
 		private System.Windows.Forms.TextBox NameTextBox;

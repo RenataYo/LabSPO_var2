@@ -47,7 +47,10 @@
 			this.EmailLabel = new System.Windows.Forms.Label();
 			this.VkLabel = new System.Windows.Forms.Label();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+			this.AddContactPicture = new System.Windows.Forms.PictureBox();
 			this.ContactsListBox = new System.Windows.Forms.ListBox();
+			this.DeleteContactPicture = new System.Windows.Forms.PictureBox();
+			this.EditContactPicture = new System.Windows.Forms.PictureBox();
 			this.BirthdayDateTime = new System.Windows.Forms.DateTimePicker();
 			this.VkTextBox = new System.Windows.Forms.TextBox();
 			this.EmailTextBox = new System.Windows.Forms.TextBox();
@@ -55,9 +58,6 @@
 			this.NameTextBox = new System.Windows.Forms.TextBox();
 			this.SurnameTextBox = new System.Windows.Forms.TextBox();
 			this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-			this.AddContactPicture = new System.Windows.Forms.PictureBox();
-			this.DeleteContactPicture = new System.Windows.Forms.PictureBox();
-			this.EditContactPicture = new System.Windows.Forms.PictureBox();
 			this.menuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
@@ -86,7 +86,7 @@
             this.helpToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(1149, 36);
+			this.menuStrip1.Size = new System.Drawing.Size(1149, 33);
 			this.menuStrip1.TabIndex = 3;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -95,7 +95,7 @@
 			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ExitMenuItem});
 			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-			this.fileToolStripMenuItem.Size = new System.Drawing.Size(69, 32);
+			this.fileToolStripMenuItem.Size = new System.Drawing.Size(69, 29);
 			this.fileToolStripMenuItem.Text = "Файл";
 			// 
 			// ExitMenuItem
@@ -113,7 +113,7 @@
             this.editContactToolStripMenuItem,
             this.removeContactToolStripMenuItem});
 			this.EditMenuItem.Name = "EditMenuItem";
-			this.EditMenuItem.Size = new System.Drawing.Size(107, 32);
+			this.EditMenuItem.Size = new System.Drawing.Size(107, 29);
 			this.EditMenuItem.Text = "Изменить";
 			// 
 			// addContactToolStripMenuItem
@@ -139,7 +139,7 @@
 			this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AboutMenuItem});
 			this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-			this.helpToolStripMenuItem.Size = new System.Drawing.Size(153, 32);
+			this.helpToolStripMenuItem.Size = new System.Drawing.Size(153, 29);
 			this.helpToolStripMenuItem.Text = "О программе...";
 			// 
 			// AboutMenuItem
@@ -246,6 +246,19 @@
 			this.splitContainer1.SplitterDistance = 340;
 			this.splitContainer1.TabIndex = 11;
 			// 
+			// AddContactPicture
+			// 
+			this.AddContactPicture.ErrorImage = null;
+			this.AddContactPicture.Image = global::ContactAppUI.Properties.Resources.AddContactIcon_512x512;
+			this.AddContactPicture.InitialImage = null;
+			this.AddContactPicture.Location = new System.Drawing.Point(3, 666);
+			this.AddContactPicture.Name = "AddContactPicture";
+			this.AddContactPicture.Size = new System.Drawing.Size(57, 69);
+			this.AddContactPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.AddContactPicture.TabIndex = 9;
+			this.AddContactPicture.TabStop = false;
+			this.AddContactPicture.Click += new System.EventHandler(this.AddContact_Click);
+			// 
 			// ContactsListBox
 			// 
 			this.ContactsListBox.FormattingEnabled = true;
@@ -255,6 +268,28 @@
 			this.ContactsListBox.Size = new System.Drawing.Size(327, 604);
 			this.ContactsListBox.TabIndex = 5;
 			this.ContactsListBox.SelectedIndexChanged += new System.EventHandler(this.ContactsListBox_SelectedIndexChanged);
+			// 
+			// DeleteContactPicture
+			// 
+			this.DeleteContactPicture.Image = global::ContactAppUI.Properties.Resources.DeleteContactIcon_512x512;
+			this.DeleteContactPicture.Location = new System.Drawing.Point(148, 666);
+			this.DeleteContactPicture.Name = "DeleteContactPicture";
+			this.DeleteContactPicture.Size = new System.Drawing.Size(56, 69);
+			this.DeleteContactPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.DeleteContactPicture.TabIndex = 8;
+			this.DeleteContactPicture.TabStop = false;
+			this.DeleteContactPicture.Click += new System.EventHandler(this.DeleteContactPicture_Click);
+			// 
+			// EditContactPicture
+			// 
+			this.EditContactPicture.Image = global::ContactAppUI.Properties.Resources.EditContactIcon_512x512;
+			this.EditContactPicture.Location = new System.Drawing.Point(76, 666);
+			this.EditContactPicture.Name = "EditContactPicture";
+			this.EditContactPicture.Size = new System.Drawing.Size(57, 69);
+			this.EditContactPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.EditContactPicture.TabIndex = 7;
+			this.EditContactPicture.TabStop = false;
+			this.EditContactPicture.Click += new System.EventHandler(this.EditContactPicture_Click);
 			// 
 			// BirthdayDateTime
 			// 
@@ -299,41 +334,6 @@
 			this.SurnameTextBox.Size = new System.Drawing.Size(622, 26);
 			this.SurnameTextBox.TabIndex = 11;
 			// 
-			// AddContactPicture
-			// 
-			this.AddContactPicture.ErrorImage = null;
-			this.AddContactPicture.Image = global::ContactAppUI.Properties.Resources.AddContactIcon_512x512;
-			this.AddContactPicture.InitialImage = null;
-			this.AddContactPicture.Location = new System.Drawing.Point(3, 666);
-			this.AddContactPicture.Name = "AddContactPicture";
-			this.AddContactPicture.Size = new System.Drawing.Size(57, 69);
-			this.AddContactPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.AddContactPicture.TabIndex = 9;
-			this.AddContactPicture.TabStop = false;
-			this.AddContactPicture.Click += new System.EventHandler(this.AddContact_Click);
-			// 
-			// DeleteContactPicture
-			// 
-			this.DeleteContactPicture.Image = global::ContactAppUI.Properties.Resources.DeleteContactIcon_512x512;
-			this.DeleteContactPicture.Location = new System.Drawing.Point(148, 666);
-			this.DeleteContactPicture.Name = "DeleteContactPicture";
-			this.DeleteContactPicture.Size = new System.Drawing.Size(56, 69);
-			this.DeleteContactPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.DeleteContactPicture.TabIndex = 8;
-			this.DeleteContactPicture.TabStop = false;
-			this.DeleteContactPicture.Click += new System.EventHandler(this.DeleteContactPicture_Click);
-			// 
-			// EditContactPicture
-			// 
-			this.EditContactPicture.Image = global::ContactAppUI.Properties.Resources.EditContactIcon_512x512;
-			this.EditContactPicture.Location = new System.Drawing.Point(76, 666);
-			this.EditContactPicture.Name = "EditContactPicture";
-			this.EditContactPicture.Size = new System.Drawing.Size(57, 69);
-			this.EditContactPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.EditContactPicture.TabIndex = 7;
-			this.EditContactPicture.TabStop = false;
-			this.EditContactPicture.Click += new System.EventHandler(this.EditContactPicture_Click);
-			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -345,6 +345,7 @@
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "MainForm";
 			this.Text = "ContactApp";
+			this.Load += new System.EventHandler(this.MainForm_Load_1);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			this.splitContainer1.Panel1.ResumeLayout(false);

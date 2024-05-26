@@ -134,7 +134,6 @@
 			this.Location = new System.Drawing.Point(12, 274);
 			this.Name = "AboutForm";
 			this.Text = "AboutForms";
-			this.Load += new System.EventHandler(this.AboutForms_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

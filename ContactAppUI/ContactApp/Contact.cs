@@ -57,6 +57,7 @@ namespace ContactApp
 		/// <param name="vkId"> vkID. </param>
 		/// <param name="birthday"> День рождения. </param>
 		/// <param name="phone"> Номер телефона. </param>
+		/// 
 		public Contact(
 	        string surname, 
 	        string name, 
