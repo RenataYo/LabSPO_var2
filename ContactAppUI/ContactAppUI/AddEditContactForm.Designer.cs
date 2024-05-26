@@ -34,14 +34,14 @@
 			this.EmailTextBox = new System.Windows.Forms.TextBox();
 			this.PhoneTextBox = new System.Windows.Forms.TextBox();
 			this.NameTextBox = new System.Windows.Forms.TextBox();
-			this.OkButton = new System.Windows.Forms.TextBox();
+			this.SurnameTextBox = new System.Windows.Forms.TextBox();
 			this.SurnameLabel = new System.Windows.Forms.Label();
 			this.NameLabel = new System.Windows.Forms.Label();
 			this.label4BirthdayLabel = new System.Windows.Forms.Label();
 			this.PhoneLabel = new System.Windows.Forms.Label();
 			this.EmailLabel = new System.Windows.Forms.Label();
 			this.VkLabel = new System.Windows.Forms.Label();
-			this.button1 = new System.Windows.Forms.Button();
+			this.OkButton = new System.Windows.Forms.Button();
 			this.CancelButton = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
@@ -81,12 +81,12 @@
 			this.NameTextBox.Size = new System.Drawing.Size(620, 26);
 			this.NameTextBox.TabIndex = 24;
 			// 
-			// OkButton
+			// SurnameTextBox
 			// 
-			this.OkButton.Location = new System.Drawing.Point(164, 56);
-			this.OkButton.Name = "OkButton";
-			this.OkButton.Size = new System.Drawing.Size(620, 26);
-			this.OkButton.TabIndex = 23;
+			this.SurnameTextBox.Location = new System.Drawing.Point(164, 56);
+			this.SurnameTextBox.Name = "SurnameTextBox";
+			this.SurnameTextBox.Size = new System.Drawing.Size(620, 26);
+			this.SurnameTextBox.TabIndex = 23;
 			// 
 			// SurnameLabel
 			// 
@@ -143,15 +143,15 @@
 			this.VkLabel.TabIndex = 22;
 			this.VkLabel.Text = "vkID:";
 			// 
-			// button1
+			// OkButton
 			// 
-			this.button1.Location = new System.Drawing.Point(487, 337);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(127, 45);
-			this.button1.TabIndex = 29;
-			this.button1.Text = "ОК";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
+			this.OkButton.Location = new System.Drawing.Point(487, 337);
+			this.OkButton.Name = "OkButton";
+			this.OkButton.Size = new System.Drawing.Size(127, 45);
+			this.OkButton.TabIndex = 29;
+			this.OkButton.Text = "ОК";
+			this.OkButton.UseVisualStyleBackColor = true;
+			this.OkButton.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// CancelButton
 			// 
@@ -168,13 +168,13 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(798, 407);
 			this.Controls.Add(this.CancelButton);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.OkButton);
 			this.Controls.Add(this.BirthdayDateTime);
 			this.Controls.Add(this.VkTextBoxox5);
 			this.Controls.Add(this.EmailTextBox);
 			this.Controls.Add(this.PhoneTextBox);
 			this.Controls.Add(this.NameTextBox);
-			this.Controls.Add(this.OkButton);
+			this.Controls.Add(this.SurnameTextBox);
 			this.Controls.Add(this.SurnameLabel);
 			this.Controls.Add(this.NameLabel);
 			this.Controls.Add(this.label4BirthdayLabel);
@@ -197,14 +197,14 @@
 		private System.Windows.Forms.TextBox EmailTextBox;
 		private System.Windows.Forms.TextBox PhoneTextBox;
 		private System.Windows.Forms.TextBox NameTextBox;
-		private System.Windows.Forms.TextBox OkButton;
+		private System.Windows.Forms.TextBox SurnameTextBox;
 		private System.Windows.Forms.Label SurnameLabel;
 		private System.Windows.Forms.Label NameLabel;
 		private System.Windows.Forms.Label label4BirthdayLabel;
 		private System.Windows.Forms.Label PhoneLabel;
 		private System.Windows.Forms.Label EmailLabel;
 		private System.Windows.Forms.Label VkLabel;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button OkButton;
 		private System.Windows.Forms.Button CancelButton;
 	}
 }
