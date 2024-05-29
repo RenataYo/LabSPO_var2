@@ -52,6 +52,7 @@
 			this.BirthdayDateTime.Size = new System.Drawing.Size(358, 26);
 			this.BirthdayDateTime.TabIndex = 28;
 			this.BirthdayDateTime.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+			this.BirthdayDateTime.ValueChanged += new System.EventHandler(this.BirthdayDateTime_ValueChanged);
 			// 
 			// VkTextBox
 			// 
@@ -59,6 +60,7 @@
 			this.VkTextBox.Name = "VkTextBox";
 			this.VkTextBox.Size = new System.Drawing.Size(622, 26);
 			this.VkTextBox.TabIndex = 27;
+			this.VkTextBox.TextChanged += new System.EventHandler(this.VkTextBox_TextChanged);
 			// 
 			// EmailTextBox
 			// 
@@ -66,6 +68,7 @@
 			this.EmailTextBox.Name = "EmailTextBox";
 			this.EmailTextBox.Size = new System.Drawing.Size(622, 26);
 			this.EmailTextBox.TabIndex = 26;
+			this.EmailTextBox.TextChanged += new System.EventHandler(this.EmailTextBox_TextChanged);
 			// 
 			// PhoneTextBox
 			// 
@@ -73,6 +76,7 @@
 			this.PhoneTextBox.Name = "PhoneTextBox";
 			this.PhoneTextBox.Size = new System.Drawing.Size(622, 26);
 			this.PhoneTextBox.TabIndex = 25;
+			this.PhoneTextBox.TextChanged += new System.EventHandler(this.PhoneTextBox_TextChanged);
 			// 
 			// NameTextBox
 			// 
@@ -80,6 +84,7 @@
 			this.NameTextBox.Name = "NameTextBox";
 			this.NameTextBox.Size = new System.Drawing.Size(620, 26);
 			this.NameTextBox.TabIndex = 24;
+			this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
 			// 
 			// SurnameTextBox
 			// 
@@ -87,6 +92,7 @@
 			this.SurnameTextBox.Name = "SurnameTextBox";
 			this.SurnameTextBox.Size = new System.Drawing.Size(620, 26);
 			this.SurnameTextBox.TabIndex = 23;
+			this.SurnameTextBox.TextChanged += new System.EventHandler(this.SurnameTextBox_TextChanged);
 			// 
 			// SurnameLabel
 			// 
@@ -145,6 +151,7 @@
 			// 
 			// OkButton
 			// 
+			this.OkButton.DialogResult = System.Windows.Forms.DialogResult.OK;
 			this.OkButton.Location = new System.Drawing.Point(487, 337);
 			this.OkButton.Name = "OkButton";
 			this.OkButton.Size = new System.Drawing.Size(127, 45);
@@ -161,6 +168,7 @@
 			this.CancelButton.TabIndex = 30;
 			this.CancelButton.Text = "Отмена";
 			this.CancelButton.UseVisualStyleBackColor = true;
+			this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
 			// 
 			// AddEditContactForm
 			// 
