@@ -56,7 +56,7 @@ namespace ContactAppUI
 		/// </summary>
 		private void BlockCreateButton()
 		{
-			SurnameTextBox.Enabled = false;
+			OkButton.Enabled = false;
 		}
 
 		/// <summary>
@@ -66,7 +66,7 @@ namespace ContactAppUI
 		{
 			if (CheckCorrectnessFields())
 			{
-				SurnameTextBox.Enabled = true;
+				OkButton.Enabled = true;
 			}
 		}
 
