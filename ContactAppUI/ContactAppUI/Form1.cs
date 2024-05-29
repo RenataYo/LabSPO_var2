@@ -114,13 +114,20 @@ namespace ContactAppUI
 		private List<Contact> Contacts { get; set; }
 
 		/// <summary>
+		/// Список контактов.
+		/// </summary>
+		private List<Contact> FoundedContacts { get; set; }
+
+		/// <summary>
 		/// Конструктор формы.
 		/// </summary>
 		public MainForm()
 		{
 			InitializeComponent();
 			Contacts = Serializer.LoadFromFile(Paths.PathToFiles);
-			UpdateContacts();
+			Contacts = Sorter.SortContacts(Contacts);
+			UpdateContacts(Contacts);
+			BirthdayBoyLabel.Text = Sorter.GetBirthdayBoys(Contacts, DateTime.Now);
 		}
 
 		/// <summary>
@@ -203,14 +210,15 @@ namespace ContactAppUI
 			{
 				Contacts.Add(TransferContact.Data);
 				Serializer.SaveToFile(Contacts, Paths.PathToFiles);
-				UpdateContacts();
+				Contacts = Sorter.SortContacts(Contacts);
+				UpdateContacts(Contacts);
 			}
 		}
 
 		/// <summary>
 		/// Метод обновления контактов в ListBox.
 		/// </summary>
-		private void UpdateContacts()
+		private void UpdateContacts(List<Contact> contacts)
 		{
 			ContactsListBox.Items.Clear();
 
@@ -226,6 +234,10 @@ namespace ContactAppUI
 		/// <param name="contact">Контакт.</param>
 		private void UpdateContactInformation(Contact contact)
 		{
+			//Форматирование телефона.
+			var intPhone = long.Parse(contact.Phone.Number);
+			var phone = string.Format("{0:+# (###) ###-##-##}", intPhone);
+
 			SurnameTextBox.Text = contact.Surname;
 			NameTextBox.Text = contact.Name;
 			BirthdayDateTime.Value = contact.Birthday;
@@ -240,9 +252,19 @@ namespace ContactAppUI
 		private void ContactsListBox_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			var index = ContactsListBox.SelectedIndex;
-			if (index >= 0)
+			if (FindContactTextBox.Text == string.Empty)
 			{
-				UpdateContactInformation(Contacts[index]);
+				if (index >= 0)
+				{
+					UpdateContactInformation(Contacts[index]);
+				}
+			}
+			else
+			{
+				if (index >= 0)
+				{
+					UpdateContactInformation(FoundedContacts[index]);
+				}
 			}
 		}
 
@@ -277,7 +299,8 @@ namespace ContactAppUI
 				{
 					Contacts[index] = TransferContact.Data;
 					Serializer.SaveToFile(Contacts, Paths.PathToFiles);
-					UpdateContacts();
+					Contacts = Sorter.SortContacts(Contacts);
+					UpdateContacts(Contacts);
 					ContactsListBox.SelectedIndex = index;
 				}
 			}
@@ -305,7 +328,8 @@ namespace ContactAppUI
 				{
 					Contacts.RemoveAt(index);
 					Serializer.SaveToFile(Contacts, Paths.PathToFiles);
-					UpdateContacts();
+					Contacts = Sorter.SortContacts(Contacts);
+					UpdateContacts(Contacts);
 					ContactsListBox.SelectedIndex = -1;
 					ClearTextBoxes();
 				}
@@ -338,7 +362,16 @@ namespace ContactAppUI
 
 		private void FindContactTextBox_TextChanged(object sender, EventArgs e)
 		{
-
+			var mask = FindContactTextBox.Text;
+			if (mask == string.Empty)
+			{
+				UpdateContacts(Contacts);
+			}
+			else
+			{
+				FoundedContacts = Sorter.SortContacts(Contacts, mask);
+				UpdateContacts(FoundedContacts);
+			}
 		}
 
 		private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)

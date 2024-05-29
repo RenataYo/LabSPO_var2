@@ -47,10 +47,7 @@
 			this.EmailLabel = new System.Windows.Forms.Label();
 			this.VkLabel = new System.Windows.Forms.Label();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-			this.AddContactPicture = new System.Windows.Forms.PictureBox();
 			this.ContactsListBox = new System.Windows.Forms.ListBox();
-			this.DeleteContactPicture = new System.Windows.Forms.PictureBox();
-			this.EditContactPicture = new System.Windows.Forms.PictureBox();
 			this.BirthdayDateTime = new System.Windows.Forms.DateTimePicker();
 			this.VkTextBox = new System.Windows.Forms.TextBox();
 			this.EmailTextBox = new System.Windows.Forms.TextBox();
@@ -58,14 +55,23 @@
 			this.NameTextBox = new System.Windows.Forms.TextBox();
 			this.SurnameTextBox = new System.Windows.Forms.TextBox();
 			this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+			this.BirthdayPanel = new System.Windows.Forms.Panel();
+			this.BirthdayWarningLabel = new System.Windows.Forms.Label();
+			this.AddContactPicture = new System.Windows.Forms.PictureBox();
+			this.DeleteContactPicture = new System.Windows.Forms.PictureBox();
+			this.EditContactPicture = new System.Windows.Forms.PictureBox();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.BirthdayBoyLabel = new System.Windows.Forms.Label();
 			this.menuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
 			this.splitContainer1.Panel2.SuspendLayout();
 			this.splitContainer1.SuspendLayout();
+			this.BirthdayPanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.AddContactPicture)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.DeleteContactPicture)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.EditContactPicture)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// FindContactTextBox
@@ -119,20 +125,22 @@
 			// addContactToolStripMenuItem
 			// 
 			this.addContactToolStripMenuItem.Name = "addContactToolStripMenuItem";
-			this.addContactToolStripMenuItem.Size = new System.Drawing.Size(260, 34);
+			this.addContactToolStripMenuItem.Size = new System.Drawing.Size(314, 34);
 			this.addContactToolStripMenuItem.Text = "Добавить контакт";
 			// 
 			// editContactToolStripMenuItem
 			// 
 			this.editContactToolStripMenuItem.Name = "editContactToolStripMenuItem";
-			this.editContactToolStripMenuItem.Size = new System.Drawing.Size(260, 34);
+			this.editContactToolStripMenuItem.Size = new System.Drawing.Size(314, 34);
 			this.editContactToolStripMenuItem.Text = "Изменить контакт";
 			// 
 			// removeContactToolStripMenuItem
 			// 
 			this.removeContactToolStripMenuItem.Name = "removeContactToolStripMenuItem";
-			this.removeContactToolStripMenuItem.Size = new System.Drawing.Size(260, 34);
+			this.removeContactToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
+			this.removeContactToolStripMenuItem.Size = new System.Drawing.Size(314, 34);
 			this.removeContactToolStripMenuItem.Text = "Удалить контакт";
+			this.removeContactToolStripMenuItem.Click += new System.EventHandler(this.DeleteContactPicture_Click);
 			// 
 			// helpToolStripMenuItem
 			// 
@@ -229,6 +237,7 @@
 			// 
 			// splitContainer1.Panel2
 			// 
+			this.splitContainer1.Panel2.Controls.Add(this.BirthdayPanel);
 			this.splitContainer1.Panel2.Controls.Add(this.BirthdayDateTime);
 			this.splitContainer1.Panel2.Controls.Add(this.VkTextBox);
 			this.splitContainer1.Panel2.Controls.Add(this.EmailTextBox);
@@ -246,19 +255,6 @@
 			this.splitContainer1.SplitterDistance = 340;
 			this.splitContainer1.TabIndex = 11;
 			// 
-			// AddContactPicture
-			// 
-			this.AddContactPicture.ErrorImage = null;
-			this.AddContactPicture.Image = global::ContactAppUI.Properties.Resources.AddContactIcon_512x512;
-			this.AddContactPicture.InitialImage = null;
-			this.AddContactPicture.Location = new System.Drawing.Point(3, 666);
-			this.AddContactPicture.Name = "AddContactPicture";
-			this.AddContactPicture.Size = new System.Drawing.Size(57, 69);
-			this.AddContactPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.AddContactPicture.TabIndex = 9;
-			this.AddContactPicture.TabStop = false;
-			this.AddContactPicture.Click += new System.EventHandler(this.AddContact_Click);
-			// 
 			// ContactsListBox
 			// 
 			this.ContactsListBox.FormattingEnabled = true;
@@ -268,28 +264,6 @@
 			this.ContactsListBox.Size = new System.Drawing.Size(327, 604);
 			this.ContactsListBox.TabIndex = 5;
 			this.ContactsListBox.SelectedIndexChanged += new System.EventHandler(this.ContactsListBox_SelectedIndexChanged);
-			// 
-			// DeleteContactPicture
-			// 
-			this.DeleteContactPicture.Image = global::ContactAppUI.Properties.Resources.DeleteContactIcon_512x512;
-			this.DeleteContactPicture.Location = new System.Drawing.Point(148, 666);
-			this.DeleteContactPicture.Name = "DeleteContactPicture";
-			this.DeleteContactPicture.Size = new System.Drawing.Size(56, 69);
-			this.DeleteContactPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.DeleteContactPicture.TabIndex = 8;
-			this.DeleteContactPicture.TabStop = false;
-			this.DeleteContactPicture.Click += new System.EventHandler(this.DeleteContactPicture_Click);
-			// 
-			// EditContactPicture
-			// 
-			this.EditContactPicture.Image = global::ContactAppUI.Properties.Resources.EditContactIcon_512x512;
-			this.EditContactPicture.Location = new System.Drawing.Point(76, 666);
-			this.EditContactPicture.Name = "EditContactPicture";
-			this.EditContactPicture.Size = new System.Drawing.Size(57, 69);
-			this.EditContactPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.EditContactPicture.TabIndex = 7;
-			this.EditContactPicture.TabStop = false;
-			this.EditContactPicture.Click += new System.EventHandler(this.EditContactPicture_Click);
 			// 
 			// BirthdayDateTime
 			// 
@@ -334,6 +308,79 @@
 			this.SurnameTextBox.Size = new System.Drawing.Size(622, 26);
 			this.SurnameTextBox.TabIndex = 11;
 			// 
+			// BirthdayPanel
+			// 
+			this.BirthdayPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.BirthdayPanel.Controls.Add(this.BirthdayBoyLabel);
+			this.BirthdayPanel.Controls.Add(this.BirthdayWarningLabel);
+			this.BirthdayPanel.Controls.Add(this.pictureBox1);
+			this.BirthdayPanel.Location = new System.Drawing.Point(6, 536);
+			this.BirthdayPanel.Name = "BirthdayPanel";
+			this.BirthdayPanel.Size = new System.Drawing.Size(767, 196);
+			this.BirthdayPanel.TabIndex = 17;
+			// 
+			// BirthdayWarningLabel
+			// 
+			this.BirthdayWarningLabel.AutoSize = true;
+			this.BirthdayWarningLabel.Location = new System.Drawing.Point(197, 80);
+			this.BirthdayWarningLabel.Name = "BirthdayWarningLabel";
+			this.BirthdayWarningLabel.Size = new System.Drawing.Size(200, 20);
+			this.BirthdayWarningLabel.TabIndex = 1;
+			this.BirthdayWarningLabel.Text = "Сегодня день рождения:";
+			// 
+			// AddContactPicture
+			// 
+			this.AddContactPicture.ErrorImage = null;
+			this.AddContactPicture.Image = global::ContactAppUI.Properties.Resources.AddContactIcon_512x512;
+			this.AddContactPicture.InitialImage = null;
+			this.AddContactPicture.Location = new System.Drawing.Point(3, 666);
+			this.AddContactPicture.Name = "AddContactPicture";
+			this.AddContactPicture.Size = new System.Drawing.Size(57, 69);
+			this.AddContactPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.AddContactPicture.TabIndex = 9;
+			this.AddContactPicture.TabStop = false;
+			this.AddContactPicture.Click += new System.EventHandler(this.AddContact_Click);
+			// 
+			// DeleteContactPicture
+			// 
+			this.DeleteContactPicture.Image = global::ContactAppUI.Properties.Resources.DeleteContactIcon_512x512;
+			this.DeleteContactPicture.Location = new System.Drawing.Point(148, 666);
+			this.DeleteContactPicture.Name = "DeleteContactPicture";
+			this.DeleteContactPicture.Size = new System.Drawing.Size(56, 69);
+			this.DeleteContactPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.DeleteContactPicture.TabIndex = 8;
+			this.DeleteContactPicture.TabStop = false;
+			this.DeleteContactPicture.Click += new System.EventHandler(this.DeleteContactPicture_Click);
+			// 
+			// EditContactPicture
+			// 
+			this.EditContactPicture.Image = global::ContactAppUI.Properties.Resources.EditContactIcon_512x512;
+			this.EditContactPicture.Location = new System.Drawing.Point(76, 666);
+			this.EditContactPicture.Name = "EditContactPicture";
+			this.EditContactPicture.Size = new System.Drawing.Size(57, 69);
+			this.EditContactPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.EditContactPicture.TabIndex = 7;
+			this.EditContactPicture.TabStop = false;
+			this.EditContactPicture.Click += new System.EventHandler(this.EditContactPicture_Click);
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = global::ContactAppUI.Properties.Resources.Warning_512x512;
+			this.pictureBox1.Location = new System.Drawing.Point(0, 3);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(191, 190);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox1.TabIndex = 0;
+			this.pictureBox1.TabStop = false;
+			// 
+			// BirthdayBoyLabel
+			// 
+			this.BirthdayBoyLabel.AutoSize = true;
+			this.BirthdayBoyLabel.Location = new System.Drawing.Point(448, 80);
+			this.BirthdayBoyLabel.Name = "BirthdayBoyLabel";
+			this.BirthdayBoyLabel.Size = new System.Drawing.Size(0, 20);
+			this.BirthdayBoyLabel.TabIndex = 2;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -354,9 +401,12 @@
 			this.splitContainer1.Panel2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
 			this.splitContainer1.ResumeLayout(false);
+			this.BirthdayPanel.ResumeLayout(false);
+			this.BirthdayPanel.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.AddContactPicture)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.DeleteContactPicture)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.EditContactPicture)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -393,6 +443,10 @@
 		private System.Windows.Forms.PictureBox DeleteContactPicture;
 		private System.Windows.Forms.PictureBox EditContactPicture;
 		private System.Windows.Forms.PictureBox AddContactPicture;
+		private System.Windows.Forms.Panel BirthdayPanel;
+		private System.Windows.Forms.Label BirthdayWarningLabel;
+		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.Label BirthdayBoyLabel;
 	}
 }
 

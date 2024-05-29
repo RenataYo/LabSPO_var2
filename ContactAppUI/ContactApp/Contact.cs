@@ -168,5 +168,6 @@ namespace ContactApp
 		        _birthday = value;
 	        }
 		}
+
 	}
 }
