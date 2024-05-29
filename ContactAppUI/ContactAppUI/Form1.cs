@@ -241,7 +241,7 @@ namespace ContactAppUI
 			SurnameTextBox.Text = contact.Surname;
 			NameTextBox.Text = contact.Name;
 			BirthdayDateTime.Value = contact.Birthday;
-			PhoneTextBox.Text = contact.PhoneNumber;
+			PhoneTextBox.Text = contact.Phone.Number;
 			EmailTextBox.Text = contact.Email;
 			VkTextBox.Text = contact.VkID;
 		}
